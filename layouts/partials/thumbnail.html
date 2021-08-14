@@ -1,0 +1,7 @@
+{{- if .File.BaseFileName }}
+<figure class="list__thumbnail">
+  <a href="{{ .Permalink }}">
+    <img src="https://pics.dmm.co.jp/digital/amateur/{{ .File.BaseFileName }}/{{ .File.BaseFileName }}jm.jpg" alt="{{ .Title }}" />
+  </a>
+</figure>
+{{- end }}

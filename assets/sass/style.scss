@@ -1331,3 +1331,13 @@ textarea {
 	color: white;
 	border-radius: 30px;
 }
+
+.main.single .post .list__thumbnail {
+	text-align: center;
+	width: 100%;
+
+	img {
+		height: 250px;
+		object-fit: cover;
+	}
+}

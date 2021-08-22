@@ -11,23 +11,21 @@
 			<div class="post__meta meta">{{ . }}</div>
 			{{- end }}
 		</header>
-		
-		{{- if .Params.thumbnail }}
-		<figure class="post__thumbnail">
-			<img src="{{ .Params.thumbnail | relURL }}" alt="{{ .Title }}">
-		</figure>
-		{{- end }}
 
+		{{- if eq .Section "post" }}
 		{{ partial "thumbnail.html" . }}
+		{{- end }}
 
 		{{- partial "post_toc.html" . -}}
 		<div class="content post__content clearfix">
 			{{ .Content }}
 		</div>
 
+		{{- if eq .Section "post" }}
 		<div>
 			{{- partial "dmm.html" . -}}
 		</div>
+		{{- end }}
 
 		{{- if .Params.tags }}
 		<footer class="post__footer">

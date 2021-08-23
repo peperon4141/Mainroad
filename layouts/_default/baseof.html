@@ -34,7 +34,7 @@
 	{{- with .OutputFormats.Get "rss" }}
 	{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
 	{{- end }}
-
+	
 	<link rel="shortcut icon" href="{{ "favicon.ico" | relURL }}">
 	{{- if not .Site.IsServer }}
 		{{- if hasPrefix .Site.GoogleAnalytics "G-" }}

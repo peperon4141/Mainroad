@@ -8,7 +8,10 @@
 		<ul class="widget__list">
 			{{- range first $recent_num $recent }}
 			<li class="widget__item">
-				<a class="widget__link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+				<a class="widget__link" href="{{ .RelPermalink }}">
+					{{ partial "thumbnail.html" . }}
+					{{ .Title }}
+				</a>
 			</li>
 			{{- end }}
 		</ul>

@@ -1,5 +1,5 @@
-{{- if .File.BaseFileName -}}
+{{- with .File -}}
 <figure class="list__thumbnail">
-  <img src="https://pics.dmm.co.jp/digital/amateur/{{ .File.BaseFileName }}/{{ .File.BaseFileName }}jm.jpg" alt="{{ .Title }}">
+  <img src="https://pics.dmm.co.jp/digital/amateur/{{ .BaseFileName }}/{{ .BaseFileName }}jm.jpg" alt="{{ $.Page.Title }}">
 </figure>
 {{- end -}}

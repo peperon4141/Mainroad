@@ -29,7 +29,7 @@
 		{{- end }}
 
 		<h2>動画ID</h2>
-		<span>{{ .File.BaseFileName }}</span>
+		{{ with .File }}{{ .BaseFileName }}{{ end }}
 
 		{{- if .Params.tags }}
 		<footer class="post__footer">

@@ -1,4 +1,5 @@
-{{ with .File.BaseFileName }}
+{{ with .File }}
+{{ with .BaseFileName}}
 <h2>無料サンプル動画 Free {{ emojify ":exclamation:" }}{{ emojify ":exclamation:" }}</h2>
 <span>{{ emojify ":point_down:" }} 無料動画を観るには下の動画をクリック {{ emojify ":point_down:" }}</span>
 <div
@@ -33,4 +34,5 @@
     全編視聴はこちらから
   </a>
 </div>
+{{ end }}
 {{ end }}

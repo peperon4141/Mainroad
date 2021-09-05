@@ -3,16 +3,11 @@
 
 {{- if $recent }}
 <div class="widget-recent widget">
-	<h4 class="widget__title">{{ T "recent_title" }}</h4>
+	<h4 class="widget__title">新着記事</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
 			{{- range first $recent_num $recent }}
-			<li class="widget__item">
-				<a class="widget__link" href="{{ .RelPermalink }}">
-					{{ partial "thumbnail.html" . }}
-					{{ .Title }}
-				</a>
-			</li>
+			{{- .Render "summary" }}
 			{{- end }}
 		</ul>
 	</div>

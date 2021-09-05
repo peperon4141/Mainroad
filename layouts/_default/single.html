@@ -41,6 +41,12 @@
 			{{ .Content }}
 		</div>
 
+		{{- if eq .Section "post" }}
+		<div>
+			{{- partial "dmm.html" . -}}
+		</div>
+		{{- end }}
+
 		<h2>動画ID</h2>
 		{{ with .File }}{{ .BaseFileName }}{{ end }}
 

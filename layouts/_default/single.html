@@ -26,13 +26,16 @@
 		</header>
 
 		{{- partial "post_toc.html" . -}}
+
+		{{- partial "dmm/dmm_button.html" . -}}
 		<div class="content post__content clearfix">
 			{{ .Content }}
 		</div>
 
 		{{- if eq .Section "post" }}
 		<div>
-			{{- partial "dmm.html" . -}}
+			{{- partial "dmm/dmm.html" . -}}
+			{{- partial "dmm/dmm_button.html" . -}}
 		</div>
 		{{- end }}
 

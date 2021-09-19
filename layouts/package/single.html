@@ -12,34 +12,30 @@
 			{{- end }}
 
 			{{ with .File }}
-				{{- if eq .Section "post" }}
 				{{ $id := .BaseFileName }}
 				<video
 					src="https://cc3001.dmm.co.jp/litevideo/freepv/{{ substr $id 0 1 }}/{{ substr $id 0 3 }}/{{ $id }}/{{ $id }}_mhb_w.mp4"
-					poster="https://pics.dmm.co.jp/digital/amateur/{{ $id }}/{{ $id }}jp-004.jpg"
+					poster="{{ $.Params.featured_image }}"
 					width="100%"
 					controls
 				></video>
-				{{ end }}
 			{{ end }}
 
 		</header>
 
 		{{- partial "post_toc.html" . -}}
 
-		{{- if eq .Section "post" }}
-			{{- partial "dmm/dmm_button.html" . -}}
-		{{- end -}}
+		{{- partial "dmm/dmm_button.html" . -}}
+
+
 		<div class="content post__content clearfix">
 			{{ .Content }}
 		</div>
 
-		{{- if eq .Section "post" }}
 		<div>
 			{{- partial "dmm/dmm.html" . -}}
 			{{- partial "dmm/dmm_button.html" . -}}
 		</div>
-		{{- end }}
 
 		<h2>動画ID</h2>
 		{{ with .File }}{{ .BaseFileName }}{{ end }}

@@ -1,3 +1,4 @@
+{{- if $.Params.featured_image }}
 
 <h2>動画全編見るならDMM{{ emojify ":fire:" }}</h2>
 <div style="margin:0;padding:5px;font-size:14px;word-break: break-all; text-align: center;">
@@ -12,7 +13,8 @@
   >
     <img
       src="{{ $.Params.featured_image }}"
-      alt="ゆい"
     />
   </a>
 </div>
+
+{{- end }}

@@ -1,5 +1,7 @@
+
 {{ with .File }}
 {{ with .BaseFileName}}
+{{- if $.Params.affiliate_url }}
 
 <div class="button">
   <a
@@ -11,5 +13,6 @@
   </a>
 </div>
 
+{{- end }}
 {{ end }}
 {{ end }}
